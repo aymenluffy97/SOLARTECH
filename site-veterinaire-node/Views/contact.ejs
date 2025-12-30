@@ -1,0 +1,59 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">CONTACT</h1>
+       <p class="text-muted">
+    <a href="/" class="text-decoration-none text-muted">Accueil</a> / <span class="text-orange">contact</span>
+</p>
+        
+        <p class="mx-auto mt-4" style="max-width: 700px; color: #999;">
+            Nous sommes impatients de recevoir vos commentaires, de répondre à vos demandes et de vous offrir toute l’aide dont vous aurez besoin !
+        </p>
+        <hr class="mx-auto" style="width: 300px; border-top: 2px solid #333;">
+    </div>
+
+    <form action="/contact" method="POST" class="mx-auto" style="max-width: 900px;">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label text-muted">Département cible *</label><br>
+                <div class="d-flex gap-3 mt-2">
+                    <label><input type="radio" name="departement" value="Photovoltaïque" required> Photovoltaïque</label>
+                    <label><input type="radio" name="departement" value="E-Mobility"> E-Mobility</label>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label class="form-label text-muted">&nbsp;</label>
+                <select name="service" class="form-select bg-light" required>
+                    <option value="" disabled selected>Service concerné</option>
+                    <option value="SAV">SAV (Service Après-Vente)</option>
+                    <option value="Administratif">Administratif</option>
+                    <option value="Commerciale">Commerciale</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" name="nom" class="form-control bg-light py-2" placeholder="Nom et prénom" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="tel" class="form-control bg-light py-2" placeholder="Tél.">
+            </div>
+            <div class="col-md-6">
+                <input type="email" name="email" class="form-control bg-light py-2" placeholder="E-mail" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="entreprise" class="form-control bg-light py-2" placeholder="Entreprise">
+            </div>
+            
+            <div class="col-12">
+                <input type="text" name="sujet" class="form-control bg-light py-2" placeholder="Sujet" required>
+            </div>
+            <div class="col-12">
+                <textarea name="message" class="form-control bg-light" rows="6" placeholder="Message"></textarea>
+            </div>
+
+            <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-solar px-5 py-2 text-white">ENVOYER</button>
+            </div>
+        </div>
+    </form>
+</div>

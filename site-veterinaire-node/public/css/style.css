@@ -1,0 +1,160 @@
+/* Variables de couleurs */
+:root {
+    --solar-green: #1a5e20; /* Un vert forêt profond pour un aspect pro */
+    --solar-white: #ffffff;
+}
+
+/* Navbar avec background vert */
+.navbar-custom { 
+    background-color: var(--solar-green) !important; 
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Style du titre du logo pour qu'il apparaisse clairement à gauche */
+.navbar-brand span {
+    color: var(--solar-white) !important; 
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Liens du menu à droite */
+.navbar-custom .nav-link { 
+    color: var(--solar-white) !important; 
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.navbar-custom .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Bouton spécial dans la nav */
+.btn-nav-accent {
+    border: 1px solid var(--solar-white);
+    border-radius: 4px;
+    padding: 5px 15px !important;
+}
+/* Barre orange supérieure */
+.top-bar {
+    background-color: #f37021; /* Orange exact */
+    color: white;
+    padding: 10px 0;
+    font-size: 0.85rem;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+/* Section Valeurs */
+.values-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.orange-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #f37021;
+    margin: 15px auto;
+}
+
+.value-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Effet d'ombre doux */
+}
+
+.value-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+    text-transform: uppercase;
+}
+/* Barre supérieure Orange */
+.top-bar {
+    background-color: #025f0f !important; /* Orange exact de l'image */
+    padding: 10px 0;
+    color: white;
+}
+
+.top-bar a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 18px;
+    transition: opacity 0.3s;
+}
+
+.top-bar a:hover {
+    opacity: 0.7;
+}
+
+/* Séparateur visuel pour l'horaire */
+.top-bar-divider {
+    height: 15px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 15px;
+}
+
+.top-bar-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Réseaux Sociaux */
+.top-bar-social a {
+    margin-right: 0 !important;
+    margin-left: 12px;
+    font-size: 1rem;
+}
+
+.top-bar-social i {
+    vertical-align: middle;
+}
+.hero-services {
+    /* Suppression de la couleur de secours verte pour éviter les conflits */
+    background-color: #333; 
+    
+    /* Superposition noire légère (0.3) au lieu de verte (0.8) pour laisser passer les couleurs de l'image */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('/images/champ-photovoltaique.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* Conservé l'orange exact pour le contraste */
+.orange-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #f37021; /* Orange exact de la top-bar */
+    margin: 20px auto;
+}

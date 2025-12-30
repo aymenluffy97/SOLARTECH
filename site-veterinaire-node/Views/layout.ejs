@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - Énergie Solaire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css?v=3">
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* On garde uniquement les styles globaux ici, pas ceux de la navbar */
+        .btn-solar { 
+            background-color: #28a745; 
+            color: white; 
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 25px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm navbar-custom navbar-dark">
+    <div class="container-fluid px-lg-5"> 
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="/images/png-clipart-solar-energy-renewable-energy-solar-power-solar-panels-logo-renewable-energy.png" alt="Logo" height="45" class="me-2 rounded bg-white p-1">
+            <span class="fw-bold text-white">SOLARTECH</span> 
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="/services">Nos services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/partenaires">Partenaires</a></li>
+                <li class="nav-item"><a class="nav-link btn-nav-accent" href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <%- body %>
+</main>
+
+<div class="top-bar d-none d-lg-block">
+    <div class="container-fluid px-lg-5 d-flex justify-content-between align-items-center">
+        <div class="top-bar-left d-flex align-items-center">
+            <a href="/"><i class="bi bi-person-circle me-1"></i> Espace Pro</a>
+            <a href="/"><i class="bi bi-headset me-1"></i> Service Après Vente</a>
+            <span class="top-bar-divider"></span>
+            <span class="top-bar-text">
+                <i class="bi bi-calendar3 me-1"></i> Lun - Ven : 08h - 18h
+            </span>
+        </div>
+        
+        <div class="top-bar-right d-flex align-items-center">
+            <div class="top-bar-links me-4">
+                <a href="/about">A propos</a>
+                <a href="/news">Actualités</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div class="top-bar-social">
+                <a href="https://facebook.com/votrepage" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com/votrecompte" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

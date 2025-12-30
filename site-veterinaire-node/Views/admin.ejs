@@ -1,0 +1,50 @@
+<div class="container py-5">
+    <h1 class="mb-4">Tableau de Bord Administrateur</h1>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Mise à jour des Services (Solaire & E-Mobility)</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/update-services" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 border-end">
+                                <h6 class="fw-bold text-uppercase mb-3">Section Photovoltaïque</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Description Solaire</label>
+                                    <textarea name="solar_desc" class="form-control" rows="4" placeholder="Entrez le texte pour la section solaire..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Image Solaire (.jpg, .png)</label>
+                                    <input type="file" name="solar_image" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h6 class="fw-bold text-uppercase mb-3">Section E-Mobility</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Description E-Mobility</label>
+                                    <textarea name="ev_desc" class="form-control" rows="4" placeholder="Entrez le texte pour les bornes de recharge..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Image E-Mobility (.jpg, .png)</label>
+                                    <input type="file" name="ev_image" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-success px-5">Enregistrer les modifications</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/logout" class="btn btn-outline-danger">Déconnexion sécurisée</a>
+    </div>
+</div>
