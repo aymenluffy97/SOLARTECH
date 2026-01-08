@@ -56,6 +56,15 @@ function isAdmin(req, res, next) {
 app.get('/login', (req, res) => {
     res.render('login', { title: 'Connexion Admin', error: null });
 });
+app.get("/produits", async (req, res) => {
+    try {
+        const produits = await Produit.find();
+        res.render("produits", { title: "Nos Produits", produits });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Erreur lors du chargement des produits");
+    }
+});
 
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
@@ -70,6 +79,12 @@ app.get('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/');
 });
+const Produit = mongoose.model("Produit", new mongoose.Schema({
+    categorie: String, // 'Panneau', 'Onduleur', 'Marque'
+    nom: String,
+    description: String,
+    imageNom: String   // Exemple: 'panneau-sunpower.jpg'
+}));
 
 // --- Pages Publiques ---
 app.get("/", async (req, res) => {
